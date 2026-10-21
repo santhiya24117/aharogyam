@@ -1,0 +1,8 @@
+{
+  "name": "Aharogyam – Healthy Vegetarian Food & Beverages",
+  "description": "Artisanal healthy vegetarian café in Rajajinagar, Bengaluru. Wholesome date-based drinks, fresh juices, nutritious oats bowls, and authentic chaat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

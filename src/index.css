@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Bright Brand Color Palette */
+  --color-citrus: #FF8A24;
+  --color-citrus-dark: #E67210;
+  --color-mango: #FFD45C;
+  --color-lime: #C9ED56;
+  --color-fresh-green: #438B49;
+  --color-forest: #173F32;
+  --color-forest-dark: #0f2b22;
+  --color-forest-light: #234B38;
+  --color-ivory: #FFF9ED;
+  --color-berry: #F47C8B;
+  --color-amber: #E5B65C;
+  --color-charcoal: #252420;
+  --color-charcoal-muted: #5e5c54;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFF9ED;
+    color: #252420;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+@keyframes canopy-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+@keyframes canopy-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+.animate-canopy-x {
+  animation: canopy-x var(--duration, 35s) linear infinite;
+}
+
+@keyframes continuous-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-smooth {
+  animation: continuous-marquee 26s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-canopy-x,
+  .animate-marquee-smooth {
+    animation: none;
+  }
+}
